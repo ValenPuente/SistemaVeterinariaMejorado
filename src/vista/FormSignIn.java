@@ -12,11 +12,11 @@ public class FormSignIn extends JFrame {
     private JPanel pnlCentral;
     private JPanel pnlInferior;
     private JTextField txtNombre;
-    private JTextField txtClave;
     private JButton btnInicioDeSesion;
     private JLabel lblMensaje;
     private JTextField txtApellido;
     private JTextField txtID;
+    private JPasswordField pwdClave;
 
     // creamos instancia de controladorVeterinarios para usar sus métodos ->
     ControladorVeterinario controladorVeterinarios = new ControladorVeterinario();
@@ -31,7 +31,7 @@ public class FormSignIn extends JFrame {
                 String id = txtID.getText();
                 String nombre = txtNombre.getText();
                 String apellido = txtApellido.getText();
-                String clave = txtClave.getText();
+                String clave = new String(pwdClave.getPassword());
 
                 // llamamos al controlador para verificar si el inicio de sesión es correcto!!
                 String retorno = controladorVeterinarios.iniciarSesionVeterinario(id, nombre, apellido, clave);

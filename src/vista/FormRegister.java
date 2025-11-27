@@ -18,6 +18,7 @@ public class FormRegister extends JFrame {
     private JLabel lblMensaje;
     private JTextField txtApellido;
     private JTextField txtId;
+    private JPasswordField pwdClave;
 
     // creamos instancia de controladorVeterinarios para usar sus métodos ->
     ControladorVeterinario controladorVeterinarios = new ControladorVeterinario();
@@ -33,7 +34,8 @@ public class FormRegister extends JFrame {
                 String id = txtId.getText();
                 String nombre = txtNombre.getText();
                 String apellido = txtApellido.getText();
-                String clave = txtClave.getText();
+                String clave = new String(pwdClave.getText()); // el pwdClave.getText() no devuelve
+                // un String directamente a diferencia de un txt, es por eso que lo debemos convertir!!
                 // llamamos al metodo del controladorVeterinarios para agregarlo a la respectiva tabla!
                 // los mandamos como String para verificar primero si están vacíos!!
                 // luego el controlador se encargará de convertirlos a int el id y la clave
