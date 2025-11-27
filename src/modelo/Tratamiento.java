@@ -6,10 +6,10 @@ public class Tratamiento {
     private int idTratamiento; // identificador único del tratamiento, es auto Incremental
     // en la base de datos !!
     private String tratamiento; // descripción del tratamiento!!
-    private double valor; // valor del tratamiento!
+    private int valor; // valor del tratamiento!
 
     // constructor de la clase tratamiento ->
-    public Tratamiento(int idTratamiento, String tratamiento, double valor) {
+    public Tratamiento(int idTratamiento, String tratamiento, int valor) {
         this.idTratamiento = idTratamiento;
         this.tratamiento = tratamiento;
         this.valor = valor;
@@ -22,7 +22,7 @@ public class Tratamiento {
     public String getTratamiento() {
         return tratamiento;
     }
-    public double getValor() {
+    public int getValor() {
         return valor;
     }
 

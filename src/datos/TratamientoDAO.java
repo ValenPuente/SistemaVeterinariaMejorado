@@ -24,7 +24,7 @@ public class TratamientoDAO {
                 while (resultSet.next()) { // recorremos todas las filas del resultado
                     int idTratamiento = resultSet.getInt("idTratamiento");
                     String nombreTratamiento = resultSet.getString("tratamiento");
-                    double valor = resultSet.getDouble("valor");
+                    int valor = resultSet.getInt("valor");
 
                     Tratamiento tratamiento = new Tratamiento(idTratamiento, nombreTratamiento, valor);
                     listaTratamientos.add(tratamiento);
